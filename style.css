@@ -1,0 +1,523 @@
+/* ==========================
+   GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+    background:#0b0b0b;
+    color:white;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+nav{
+    background:#111;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 70px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo i{
+    font-size:32px;
+    color:#00e5ff;
+    margin-right:10px;
+}
+
+.logo h2{
+    color:#00e5ff;
+    font-size:30px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00e5ff;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    height:100vh;
+    background-image:url("Images/hero.jpg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+    position:relative;
+    text-align:center;
+    width:70%;
+}
+
+.hero-content h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.hero-content button{
+
+    padding:15px 35px;
+    border:none;
+    border-radius:8px;
+    background:#00e5ff;
+    color:black;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hero-content button:hover{
+
+    background:white;
+    transform:scale(1.05);
+
+}
+
+/* ==========================
+   COMMON
+========================== */
+
+section{
+    padding:80px;
+}
+
+.section-title{
+    text-align:center;
+    color:#00e5ff;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.page-title{
+    padding-top:140px;
+    text-align:center;
+}
+
+.page-title h1{
+    font-size:45px;
+    color:#00e5ff;
+}
+
+.page-title p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about{
+
+    width:85%;
+    margin:auto;
+    text-align:center;
+}
+
+.about p{
+
+    font-size:18px;
+    color:#ddd;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.games-container{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.games-container .card{
+    background:#181818;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.games-container .card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-container{
+
+    width:90%;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,350px);
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:#181818;
+
+    border:2px solid #222;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+}
+
+.card img{
+
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2,
+.card h3{
+
+    padding:15px;
+}
+
+.card p{
+
+    padding:0 15px 15px;
+    color:#ddd;
+}
+
+.card button{
+
+    margin:15px;
+    padding:12px 25px;
+    background:#00e5ff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.card button:hover{
+
+    background:white;
+}
+
+/* ==========================
+   VIEW BUTTON
+========================== */
+
+.view-button{
+
+    text-align:center;
+    margin-top:40px;
+}
+
+.view-btn{
+
+    padding:14px 35px;
+    background:#00e5ff;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.view-btn:hover{
+
+    background:white;
+}
+
+
+/* ==========================
+   CONTACT PAGE
+========================== */
+
+.contact-container{
+    width:90%;
+    margin:50px auto;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.contact-form,
+.contact-info{
+    width:48%;
+    background:#181818;
+    padding:30px;
+    border-radius:10px;
+}
+
+.contact-form h2,
+.contact-info h2{
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    outline:none;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form button{
+    width:100%;
+    padding:15px;
+    background:#00e5ff;
+    border:none;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:white;
+}
+
+.contact-info img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    margin:15px 0;
+}
+
+.contact-info i{
+    color:#00e5ff;
+    margin-right:10px;
+}
+
+/* ==========================
+   LOGIN & SIGNUP
+========================== */
+
+.login-section,
+.signup-section{
+    padding-top:140px;
+    padding-bottom:80px;
+    display:flex;
+    justify-content:center;
+}
+
+.login-box,
+.signup-box{
+    width:420px;
+    background:#181818;
+    padding:35px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.login-box h1,
+.signup-box h1{
+    color:#00e5ff;
+    margin-bottom:25px;
+}
+
+.login-box input,
+.signup-box input{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    outline:none;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.login-box button,
+.signup-box button{
+    width:100%;
+    padding:15px;
+    background:#00e5ff;
+    border:none;
+    border-radius:6px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-box button:hover,
+.signup-box button:hover{
+    background:white;
+}
+
+.login-box p,
+.signup-box p{
+    margin-top:20px;
+}
+
+.login-box a,
+.signup-box a{
+    color:#00e5ff;
+}
+
+#loginMessage,
+#signupMessage{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#111;
+    margin-top:60px;
+    padding:40px 80px 20px;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.footer h2,
+.footer h3{
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+.footer p{
+    margin-bottom:10px;
+    color:#ddd;
+}
+
+.footer i{
+    font-size:22px;
+    color:white;
+    margin-right:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.footer i:hover{
+    color:#00e5ff;
+}
+
+footer hr{
+    margin:30px 0 15px;
+    border:1px solid #333;
+}
+
+.copyright{
+    text-align:center;
+    color:#bbb;
+}
+
+/* ==========================
+   EXTRA HOVER EFFECTS
+========================== */
+
+.card{
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #00e5ff;
+}
+
+button{
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
